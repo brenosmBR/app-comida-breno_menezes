@@ -1,0 +1,7 @@
+{
+    "editor.fontSize": 14.5,
+    "cmake.sourceDirectory": "${workspaceFolder}/windows/flutter",
+
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active"
+}
