@@ -5,15 +5,13 @@ import '../screens/categories_meals_screen.dart';
 class CategoryItem extends StatelessWidget {
   final Category category;
 
+  // ignore: use_key_in_widget_constructors
   const CategoryItem(this.category);
 
   void _selectCategory(BuildContext context) {
-    Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (_) {
-          return CategoriesMealsScreen(category);
-        },
-      ),
+    Navigator.of(context).pushNamed(
+      '/categories-meals',
+      arguments: category,
     );
   }
 

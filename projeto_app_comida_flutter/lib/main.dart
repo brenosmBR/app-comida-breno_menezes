@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'screens/categories_screen.dart';
+import 'screens/categories_meals_screen.dart';
 
 void main() => runApp(MyApp());
 
+// ignore: use_key_in_widget_constructors
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,6 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Vamos Cozinhar?',
       theme: ThemeData(
         primarySwatch: Colors.pink,
+        // ignore: deprecated_member_use
         accentColor: Colors.amber,
         fontFamily: 'Raleway',
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
@@ -21,6 +24,9 @@ class MyApp extends StatelessWidget {
             ),
       ),
       home: const CategoriesScreen(),
+      routes: {
+        '/categories-meals': (ctx) => const CategoriesMealsScreen(),
+      },
     );
   }
 }
