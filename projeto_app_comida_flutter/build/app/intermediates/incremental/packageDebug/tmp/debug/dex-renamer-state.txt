@@ -1,4 +1,0 @@
-#Wed May 11 19:38:07 BRT 2022
-base.0=C\:\\Users\\bmene\\OneDrive\\Projetos\\projeto-app-comida-flutter\\projeto_app_comida_flutter\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
