@@ -1,2 +1,6 @@
-* linguist-vendored
-*.dart linguist-detectable=true
+linguist-documentation
+linguist-language
+linguist-vendored
+linguist-generated
+linguist-detectable
+.dart linguist-detectable=true
