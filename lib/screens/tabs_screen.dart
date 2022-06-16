@@ -1,13 +1,16 @@
-// ignore_for_file: deprecated_member_use, unused_field
+// ignore_for_file: deprecated_member_use, unused_field, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 
 import 'categories_screen.dart';
 import 'favorite_screen.dart';
 import '../components/main_drawer.dart';
+import '../models/meal.dart';
 
 class TabScreen extends StatefulWidget {
-  const TabScreen({Key? key}) : super(key: key);
+  final List<Meal> favoriteMeals;
+
+  const TabScreen(this.favoriteMeals);
 
   @override
   State<TabScreen> createState() => _TabScreenState();
@@ -21,10 +24,16 @@ class _TabScreenState extends State<TabScreen> {
     'Meus Favoritos',
   ];
 
-  final List<Widget> _screens = [
-    const CategoriesScreen(),
-    const FavoriteScreen(),
-  ];
+  List<Widget> _screens = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _screens = [
+      const CategoriesScreen(),
+      FavoriteScreen(widget.favoriteMeals),
+    ];
+  }
 
   _selectScreen(int index) {
     setState(() {
