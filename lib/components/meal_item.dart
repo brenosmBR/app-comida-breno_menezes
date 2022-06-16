@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import '../models/meal.dart';
 import '../utils/app_routes.dart';
@@ -5,7 +7,6 @@ import '../utils/app_routes.dart';
 class MealItem extends StatelessWidget {
   final Meal meal;
 
-  // ignore: use_key_in_widget_constructors
   const MealItem(this.meal);
 
   void _selectMeal(BuildContext context) {
